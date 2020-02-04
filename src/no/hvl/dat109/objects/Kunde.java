@@ -1,5 +1,11 @@
 package no.hvl.dat109.objects;
 
+/**
+ * Klasse for å definere en kunde.
+ * 
+ * @author Marius, Charlie, Glenn, Francis
+ *
+ */
 public class Kunde {
 	private String fornavn;
 	private String etternavn;

@@ -1,5 +1,12 @@
 package no.hvl.dat109.objects;
 
+
+/**
+ * Klasse for å definere en bil.
+ * 
+ * @author Marius, Charlie, Glenn, Francis
+ *
+ */
 public class Bil {
 	private String regnr;
 	private String merke;
