@@ -59,8 +59,6 @@ public class Kontor {
 		return res;
 	}
 	
-<<<<<<< HEAD
-=======
 	/**
 	 * Metode for å lagre en reservasjon
 	 */
@@ -74,5 +72,4 @@ public class Kontor {
 		selskap.leggTilReservasjon(res);
 	}
 
->>>>>>> 5ed7d3756c6b9f785295494f70d599e66dcf6d55
 }
