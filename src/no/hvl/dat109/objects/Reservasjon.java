@@ -27,6 +27,8 @@ public class Reservasjon {
 		this.utleiested = utleiested;
 		this.retursted = retursted;
 		this.kunde = kunde;
+		
+		reserver(bil);
 	}
 	
 	public void reserver(Bil bil) {

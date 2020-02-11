@@ -52,6 +52,10 @@ public class Selskap {
 		return this.reservasjoner;
 	}
 	
+	public void leggTilReservasjon(Reservasjon res) {
+		reservasjoner.add(res);
+	}
+	
 	public List<Kontor> getKontorer(){
 		return this.kontorer;
 	}
