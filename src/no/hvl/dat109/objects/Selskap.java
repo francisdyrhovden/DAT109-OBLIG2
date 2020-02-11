@@ -1,5 +1,8 @@
 package no.hvl.dat109.objects;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Klasse for å definere ett selskap
  * 
@@ -10,11 +13,13 @@ public class Selskap {
 	private String navn;
 	private String firmaAdr;
 	private int tlfNr;
+	private List<Reservasjon> reservasjoner;
 	
 	public Selskap(String navn, String firmaAdr, int tlfNr) {
 		this.navn = navn;
 		this.firmaAdr = firmaAdr;
 		this.tlfNr = tlfNr;
+		this.reservasjoner = new ArrayList<Reservasjon>();
 	}
 
 	public String getNavn() {
@@ -39,6 +44,10 @@ public class Selskap {
 
 	public void setTlfNr(int tlfNr) {
 		this.tlfNr = tlfNr;
+	}
+	
+	public List<Reservasjon> getReservasjoner(){
+		return this.reservasjoner;
 	}
 	
 	
