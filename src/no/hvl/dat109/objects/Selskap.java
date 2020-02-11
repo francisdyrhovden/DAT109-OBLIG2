@@ -52,5 +52,9 @@ public class Selskap {
 		return this.reservasjoner;
 	}
 	
+	public void leggTilReservasjon(Reservasjon res) {
+		reservasjoner.add(res);
+	}
+	
 	
 }
