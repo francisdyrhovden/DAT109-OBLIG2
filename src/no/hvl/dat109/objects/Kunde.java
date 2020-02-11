@@ -10,9 +10,9 @@ public class Kunde {
 	private String fornavn;
 	private String etternavn;
 	private int tlfNr;
-	private String addresse;
+	private Adresse addresse;
 	
-	public Kunde(String fornavn, String etternavn, int tlfNr, String addresse) {
+	public Kunde(String fornavn, String etternavn, int tlfNr, Adresse addresse) {
 		this.fornavn = fornavn;
 		this.etternavn = etternavn;
 		this.tlfNr = tlfNr;
@@ -43,11 +43,11 @@ public class Kunde {
 		this.tlfNr = tlfNr;
 	}
 
-	public String getAddresse() {
+	public Adresse getAddresse() {
 		return addresse;
 	}
 
-	public void setAddresse(String addresse) {
+	public void setAddresse(Adresse addresse) {
 		this.addresse = addresse;
 	}
 	

@@ -1,5 +1,12 @@
 package no.hvl.dat109.objects;
 
+
+/**
+ * Klasse for å definere en adresse.
+ * 
+ * @author Marius, Charlie, Glenn, Francis
+ *
+ */
 public class Adresse {
 	
 	private String gateadresse;
