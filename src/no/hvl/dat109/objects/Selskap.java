@@ -52,5 +52,8 @@ public class Selskap {
 		return this.reservasjoner;
 	}
 	
+	public List<Kontor> getKontorer(){
+		return this.kontorer;
+	}
 	
 }

@@ -27,9 +27,5 @@ public class Kontor {
 	public Adresse getAdresse() {
 		return adresse;
 	}
-	
-	
-	
-	
 
 }
