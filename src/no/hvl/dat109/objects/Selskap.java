@@ -12,11 +12,11 @@ import java.util.List;
 public class Selskap {
 	private String navn;
 	private Adresse firmaAdr;
-	private int tlfNr;
+	private String tlfNr;
 	private List<Reservasjon> reservasjoner;
 	private List<Kontor> kontorer;
 	
-	public Selskap(String navn, Adresse firmaAdr, int tlfNr) {
+	public Selskap(String navn, Adresse firmaAdr, String tlfNr) {
 		this.navn = navn;
 		this.firmaAdr = firmaAdr;
 		this.tlfNr = tlfNr;
@@ -40,11 +40,11 @@ public class Selskap {
 		this.firmaAdr = firmaAdr;
 	}
 
-	public int getTlfNr() {
+	public String getTlfNr() {
 		return tlfNr;
 	}
 
-	public void setTlfNr(int tlfNr) {
+	public void setTlfNr(String tlfNr) {
 		this.tlfNr = tlfNr;
 	}
 	
@@ -52,5 +52,12 @@ public class Selskap {
 		return this.reservasjoner;
 	}
 	
+	public void leggTilReservasjon(Reservasjon res) {
+		reservasjoner.add(res);
+	}
+	
+	public List<Kontor> getKontorer(){
+		return this.kontorer;
+	}
 	
 }
