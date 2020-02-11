@@ -1,9 +1,9 @@
 package no.hvl.dat109.objects;
 
-import java.util.Date;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Klasse for å definere ett kontor.
@@ -26,7 +26,6 @@ public class Kontor {
 		this.selskap = selskap;
 		this.biler = new ArrayList<Bil>();
 	}
-	
 
 	public int getId() {
 		return id;
@@ -39,7 +38,7 @@ public class Kontor {
 	/**
 	 * Metode for å lage en reservasjon.
 	 */
-	public Reservasjon lagReservasjon(Bil bil, Date startDato, int antDager, Kontor utleieKontor, Kontor returKontor, Kunde kunde) {
+	public Reservasjon lagReservasjon(Bil bil, LocalDate startDato, int antDager, Kontor utleieKontor, Kontor returKontor, Kunde kunde) {
 		/**
 		 * ToDo:
 		 * - Måte for å velge bil utifra bilklassen brukeren velger
