@@ -17,22 +17,16 @@ public class Kontor {
 	private final int id;
 	private Adresse adresse;
 	private Selskap selskap;
+	private List<Bil> biler;
 	
 	public Kontor(int id, Adresse adresse, Selskap selskap) {
 		super();
 		this.id = count.incrementAndGet();
 		this.adresse = adresse;
 		this.selskap = selskap;
+		this.biler = new ArrayList<Bil>();
 	}
 	
-	public void leggTilBiler() {
-	
-	List<Bil> biler =new ArrayList<Bil>();
-	biler.add(SU 12345, Fiat, Panda);
-	
-	
-	
-	}
 
 	public int getId() {
 		return id;
@@ -71,5 +65,22 @@ public class Kontor {
 		 */
 		selskap.leggTilReservasjon(res);
 	}
+
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
+
+
+	public void setSelskap(Selskap selskap) {
+		this.selskap = selskap;
+	}
+
+
+	public void setBiler(List<Bil> biler) {
+		this.biler = biler;
+	}
+	
+	
 
 }
