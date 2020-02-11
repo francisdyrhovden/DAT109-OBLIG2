@@ -1,6 +1,8 @@
 package no.hvl.dat109.objects;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Klasse for å definere ett kontor.
@@ -19,6 +21,15 @@ public class Kontor {
 		this.id = count.incrementAndGet();
 		this.adresse = adresse;
 	}
+	
+	public void leggTilBiler() {
+	
+	List<Bil> biler =new ArrayList<Bil>();
+	biler.add(SU 12345, Fiat, Panda);
+	
+	
+	
+	}
 
 	public int getId() {
 		return id;
@@ -29,7 +40,4 @@ public class Kontor {
 	}
 	
 	
-	
-	
-
 }
