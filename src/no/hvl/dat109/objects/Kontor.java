@@ -27,8 +27,7 @@ public class Kontor {
 	
 	public void leggTilBiler() {
 	
-	List<Bil> biler =new ArrayList<Bil>();
-	biler.add(SU 12345, Fiat, Panda);
+
 	
 	
 	

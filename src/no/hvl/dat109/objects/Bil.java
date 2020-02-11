@@ -15,7 +15,7 @@ public class Bil {
 	private UtleiegruppeEnum utleiegruppe;
 	private Boolean ledig;
 	
-	public Bil(String regnr, String merke, String modell, String farge, UtleiegruppeEnum utleiegruppe) {
+	public Bil(String regnr, String merke, String modell, String farge, UtleiegruppeEnum utleiegruppe, boolean ledig) {
 		this.regnr = regnr;
 		this.merke = merke;
 		this.modell = modell;
