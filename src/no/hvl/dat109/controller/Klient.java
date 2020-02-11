@@ -1,4 +1,4 @@
-package controller;
+package no.hvl.dat109.controller;
 
 import no.hvl.dat109.objects.*;
 
