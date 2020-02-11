@@ -34,7 +34,7 @@ public class Kontor {
 	/**
 	 * Metode for å lage en reservasjon.
 	 */
-	public Reservasjon lagReservasjon(Bil bil, Date startDato, int antDager, Kontor utleieKontor, Kontor returKontor) {
+	public Reservasjon lagReservasjon(Bil bil, Date startDato, int antDager, Kontor utleieKontor, Kontor returKontor, Kunde kunde) {
 		/**
 		 * ToDo:
 		 * - Måte for å velge bil utifra bilklassen brukeren velger
@@ -44,7 +44,7 @@ public class Kontor {
 		 * - Finne ut hvilket kontor som skal ta imot bil etter reservasjonen
 		 */
 
-		Reservasjon res = new Reservasjon(bil, startDato, antDager, utleieKontor, returKontor);
+		Reservasjon res = new Reservasjon(bil, startDato, antDager, utleieKontor, returKontor, kunde);
 		return res;
 	}
 	
