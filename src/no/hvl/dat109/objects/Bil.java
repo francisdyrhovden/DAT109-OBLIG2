@@ -71,4 +71,12 @@ public class Bil {
 	public void setLedig(Boolean ledig) {
 		this.ledig = ledig;
 	}
+
+	@Override
+	public String toString() {
+		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge
+				+ ", utleiegruppe=" + utleiegruppe + ", ledig=" + ledig + "]";
+	}
+	
+	
 }
