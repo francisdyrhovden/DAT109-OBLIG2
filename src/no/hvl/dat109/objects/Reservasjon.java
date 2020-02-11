@@ -27,4 +27,8 @@ public class Reservasjon {
 		this.retursted = retursted;
 	}
 	
+	public void reserver(Bil bil) {
+		bil.setLedig(false);
+	}
+	
 }

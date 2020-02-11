@@ -14,12 +14,14 @@ public class Selskap {
 	private Adresse firmaAdr;
 	private int tlfNr;
 	private List<Reservasjon> reservasjoner;
+	private List<Kontor> kontorer;
 	
 	public Selskap(String navn, Adresse firmaAdr, int tlfNr) {
 		this.navn = navn;
 		this.firmaAdr = firmaAdr;
 		this.tlfNr = tlfNr;
 		this.reservasjoner = new ArrayList<Reservasjon>();
+		this.kontorer = new ArrayList<Kontor>();
 	}
 
 	public String getNavn() {

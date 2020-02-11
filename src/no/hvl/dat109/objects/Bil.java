@@ -21,7 +21,7 @@ public class Bil {
 		this.modell = modell;
 		this.farge = farge;
 		this.utleiegruppe = utleiegruppe;
-		this.ledig = false;
+		this.ledig = true;
 	}
 
 	public String getRegnr() {
