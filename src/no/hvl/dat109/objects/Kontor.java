@@ -79,7 +79,4 @@ public class Kontor {
 	public void setBiler(List<Bil> biler) {
 		this.biler = biler;
 	}
-	
-	
-
 }
