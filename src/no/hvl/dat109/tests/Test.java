@@ -18,14 +18,11 @@ class Test {
 	@org.junit.jupiter.api.Test
 	void erBilReservert() {
 		Bil b1 = new Bil("SU12345", "Fiat", "Panda", "Rød", UtleiegruppeEnum.LITEN_BIL);
-		Bil b2 = new Bil("EL34567", "Nissan", "Leaf", "Grå", UtleiegruppeEnum.MELLOMSTOR_BIL);
 		
 		Reservasjon.reserver(b1);
 		
 		assertFalse(b1.getLedig());
 	}
 	
-	@Test
 	
-
 }
