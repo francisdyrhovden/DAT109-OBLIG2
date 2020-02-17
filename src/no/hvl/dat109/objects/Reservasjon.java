@@ -32,7 +32,7 @@ public class Reservasjon {
 		reserver(bil);
 	}
 	
-	public void reserver(Bil bil) {
+	public static void reserver(Bil bil) {
 		bil.setLedig(false);
 	}
 
