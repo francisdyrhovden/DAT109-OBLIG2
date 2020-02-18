@@ -1,5 +1,6 @@
 package no.hvl.dat109.controller;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -9,7 +10,7 @@ import no.hvl.dat109.objects.Kontor;
 
 public class SokEtterBil {
 	
-	public List<Bil> sokBil(Kontor utleiested, Kontor retursted, LocalDate dato, LocalDate klokkeslett, int antallDager) {
+	public List<Bil> sokBil() {
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -19,7 +20,8 @@ public class SokEtterBil {
 		System.out.println("Skriv inn ønsket returkontor: ");
 		String returkontor = sc.nextLine();
 		
-		System.out.println("Skriv inn dato du ønsker å leie fra. Trykk enter mellom dag, måned og år: ");
+		System.out.println("Skriv inn dato du ønsker å leie fra. (dd/MM/yyyy)");
+		String dato = sc.nextLine();
 		int dag = sc.nextInt();
 		int maaned = sc.nextInt();
 		int aar = sc.nextInt();
