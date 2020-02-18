@@ -39,16 +39,8 @@ public class Kontor {
 	 * Metode for å lage en reservasjon.
 	 */
 	public Reservasjon lagReservasjon(Bil bil, LocalDate startDato, int antDager, Kontor utleieKontor, Kontor returKontor, Kunde kunde) {
-		/**
-		 * ToDo:
-		 * - Måte for å velge bil utifra bilklassen brukeren velger
-		 * - Måte for å få start dato for reservasjonen
-		 * - Måte for å hente antall dager brukeren vil leige bilen
-		 * - Sette utleiested som kontor som lager reservasjon
-		 * - Finne ut hvilket kontor som skal ta imot bil etter reservasjonen
-		 */
-
 		Reservasjon res = new Reservasjon(bil, startDato, antDager, utleieKontor, returKontor, kunde);
+		
 		return res;
 	}
 	
@@ -56,12 +48,6 @@ public class Kontor {
 	 * Metode for å lagre en reservasjon
 	 */
 	public void lagreReservasjon(Reservasjon res) {
-		/**
-		 * ToDo:
-		 * - Måte for å hente reservasjonen som nettopp er opprettet.
-		 * - Måte for å hente selskap.
-		 * - Måte for å legge til denne reservasjonen i selskap listen.
-		 */
 		selskap.leggTilReservasjon(res);
 	}
 

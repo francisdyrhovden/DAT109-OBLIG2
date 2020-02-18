@@ -31,9 +31,4 @@ public class Adresse {
 	public String getPoststed() {
 		return poststed;
 	}
-	
-	
-	
-	
-
 }

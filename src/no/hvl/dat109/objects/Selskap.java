@@ -52,6 +52,11 @@ public class Selskap {
 		return this.reservasjoner;
 	}
 	
+	/**
+	 * Metode for å legge til en reservasjon.
+	 * 
+	 * @param res
+	 */
 	public void leggTilReservasjon(Reservasjon res) {
 		reservasjoner.add(res);
 	}

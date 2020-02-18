@@ -32,6 +32,11 @@ public class Reservasjon {
 		reserver(bil);
 	}
 	
+	/**
+	 * Metode for å sette en bil som reservert.
+	 * 
+	 * @param bil
+	 */
 	public static void reserver(Bil bil) {
 		bil.setLedig(false);
 	}
