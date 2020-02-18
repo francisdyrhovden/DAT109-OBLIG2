@@ -11,8 +11,6 @@ import no.hvl.dat109.objects.Reservasjon;
 import no.hvl.dat109.objects.Selskap;
 import no.hvl.dat109.objects.UtleiegruppeEnum;
 
-import no.hvl.dat109.objects.UtleiegruppeEnum;
-
 class Test {
 
 	@org.junit.jupiter.api.Test
