@@ -1,15 +1,18 @@
 package no.hvl.dat109.controller;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import no.hvl.dat109.objects.Bil;
 import no.hvl.dat109.objects.Kontor;
+import no.hvl.dat109.objects.Selskap;
 
 public class SokEtterBil {
 	
-	public List<Bil> sokBil(Kontor utleiested, Kontor retursted, LocalDate dato, LocalDate klokkeslett, int antallDager) {
+	public List<Bil> sokBil(Selskap selskap) {
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -31,7 +34,22 @@ public class SokEtterBil {
 		System.out.println("Skriv inn hvor mange dager du vil leie bilen: ");
 		int dager = sc.nextInt();
 		
-		return null;
+		List<Kontor> alleKontorer = selskap.getKontorer();
+		
+		Kontor utleieplass = alleKontorer.stream()
+				.filter(k -> utleiekontor.equals(k.getNavn()))
+				.findAny()
+				.orElse(null);
+		
+		List<Bil> alleBiler = utleieplass.getBiler();
+		
+		List<Bil> bilListe =  alleBiler.stream()
+				.filter(b -> b.getLedig() == true)
+				.collect(Collectors.toList());
+		
+		sc.close();
+		
+		return bilListe;
 		
 	}
 

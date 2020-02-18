@@ -15,16 +15,26 @@ public class Kontor {
 	
 	private static final AtomicInteger count = new AtomicInteger(0);
 	private final int id;
+	private String navn;
 	private Adresse adresse;
 	private Selskap selskap;
 	private List<Bil> biler;
 	
-	public Kontor(int id, Adresse adresse, Selskap selskap) {
+	public Kontor(int id, String navn, Adresse adresse, Selskap selskap) {
 		super();
 		this.id = count.incrementAndGet();
+		this.navn = navn;
 		this.adresse = adresse;
 		this.selskap = selskap;
 		this.biler = new ArrayList<Bil>();
+	}
+
+	public String getNavn() {
+		return navn;
+	}
+
+	public void setNavn(String navn) {
+		this.navn = navn;
 	}
 
 	public int getId() {
@@ -64,5 +74,9 @@ public class Kontor {
 
 	public void setBiler(List<Bil> biler) {
 		this.biler = biler;
+	}
+	
+	public List<Bil> getBiler() {
+		return biler;
 	}
 }
