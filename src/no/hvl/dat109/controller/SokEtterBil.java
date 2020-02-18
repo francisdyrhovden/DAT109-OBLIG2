@@ -1,5 +1,6 @@
 package no.hvl.dat109.controller;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,8 @@ public class SokEtterBil {
 		System.out.println("Skriv inn ønsket returkontor: ");
 		String returkontor = sc.nextLine();
 		
-		System.out.println("Skriv inn dato du ønsker å leie fra. Trykk enter mellom dag, måned og år: ");
+		System.out.println("Skriv inn dato du ønsker å leie fra. (dd/MM/yyyy)");
+		String dato = sc.nextLine();
 		int dag = sc.nextInt();
 		int maaned = sc.nextInt();
 		int aar = sc.nextInt();
