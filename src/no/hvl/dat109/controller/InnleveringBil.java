@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 import no.hvl.dat109.objects.Bil;
+import no.hvl.dat109.objects.Kontor;
+import no.hvl.dat109.objects.Reservasjon;
 
 /**
  * Klasse som definerer innleveringen av en bil.
@@ -18,7 +20,7 @@ public class InnleveringBil {
 	 * 
 	 * @param bil
 	 */
-	public void leverInn(Bil bil) {
+	public void leverInn(Bil bil, Reservasjon res) {
 		//Dato for innlevering
 		LocalDate currDate = LocalDate.now();
 		
@@ -36,6 +38,10 @@ public class InnleveringBil {
 		//Setter ny kmStand på bil og setter bil som ledig.
 		bil.setKmStand(kmStand);
 		bil.setLedig(true);
+		
+		//Henter returkontor og legger til bil i deres billiste
+		Kontor returKontor = res.getRetursted();
+		returKontor.leggTilBil(bil);
 		
 		/**
 		 * Trenger vi å ta med en "Regning" klasse? 

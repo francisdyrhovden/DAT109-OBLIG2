@@ -71,6 +71,9 @@ public class Kontor {
 		this.selskap = selskap;
 	}
 
+	public void leggTilBil(Bil bil) {
+		biler.add(bil);
+	}
 
 	public void setBiler(List<Bil> biler) {
 		this.biler = biler;
