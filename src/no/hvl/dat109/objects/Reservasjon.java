@@ -37,8 +37,13 @@ public class Reservasjon {
 	 * 
 	 * @param bil
 	 */
-	public static void reserver(Bil bil) {
-		bil.setLedig(false);
+	public void reserver(Bil bil) {
+		LocalDate currDate = LocalDate.now();
+		LocalDate sluttDato = startDato.plusDays(antallDager);
+		
+		while (currDate.isAfter(startDato) && currDate.isBefore(sluttDato)) {
+			bil.setLedig(false);
+		}
 	}
 
 	public Bil getBil() {
