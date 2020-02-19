@@ -28,7 +28,17 @@ public class UtleieBil {
 		int kortNummer = sc.nextInt();
 		
 		Kredittkort kort = new Kredittkort(kortNummer);
-		kort.validerKort();
+		Boolean gyldigKort = kort.validerKort();
+		while (!gyldigKort) {
+			/**
+			 * Legg til feilmelding og nytt forsøk på å skrive inn kortnummer.
+			 */
+			System.out.println("Kortnummer ikke gyldig. Prøv igjen: ");
+			int nyttKortNummer = sc.nextInt();
+			
+			kort.setKortNummer(nyttKortNummer);
+			gyldigKort = kort.validerKort();
+		}
 		
 		String regNr = bil.getRegnr();
 		

@@ -15,9 +15,13 @@ public class Kredittkort {
 		this.kortNummer = kortNummer;
 	}
 	
-	public void validerKort() {
-		/**
-		 * Lag validering her.
-		 */
+	public boolean validerKort() {
+		boolean ok = false;
+		
+		if (String.valueOf(kortNummer).length() == 16) {
+			ok = true;
+		}
+		
+		return ok;
 	}
 }
