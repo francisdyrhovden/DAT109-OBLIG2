@@ -11,12 +11,22 @@ public class Kunde {
 	private String etternavn;
 	private int tlfNr;
 	private Adresse addresse;
+	private Kredittkort kredittKort;
 	
 	public Kunde(String fornavn, String etternavn, int tlfNr, Adresse addresse) {
 		this.fornavn = fornavn;
 		this.etternavn = etternavn;
 		this.tlfNr = tlfNr;
 		this.addresse = addresse;
+		this.kredittKort = null;
+	}
+
+	public Kredittkort getKredittKort() {
+		return kredittKort;
+	}
+
+	public void setKredittKort(Kredittkort kredittKort) {
+		this.kredittKort = kredittKort;
 	}
 
 	public String getFornavn() {

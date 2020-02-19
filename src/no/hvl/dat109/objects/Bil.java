@@ -14,6 +14,7 @@ public class Bil {
 	private String farge;
 	private UtleiegruppeEnum utleiegruppe;
 	private Boolean ledig;
+	private int kmStand;
 	
 	public Bil(String regnr, String merke, String modell, String farge, UtleiegruppeEnum utleiegruppe) {
 		this.regnr = regnr;
@@ -22,6 +23,9 @@ public class Bil {
 		this.farge = farge;
 		this.utleiegruppe = utleiegruppe;
 		this.ledig = true;
+		
+		//Bare for å teste og slippe å gjøre mange endringer før det fungerer.
+		this.kmStand = 0;
 	}
 
 	public String getRegnr() {
@@ -34,6 +38,14 @@ public class Bil {
 
 	public String getMerke() {
 		return merke;
+	}
+
+	public int getKmStand() {
+		return kmStand;
+	}
+
+	public void setKmStand(int kmStand) {
+		this.kmStand = kmStand;
 	}
 
 	public void setMerke(String merke) {

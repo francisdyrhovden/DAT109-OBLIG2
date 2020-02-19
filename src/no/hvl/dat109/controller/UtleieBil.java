@@ -4,9 +4,23 @@ import java.util.Scanner;
 
 import no.hvl.dat109.objects.Bil;
 import no.hvl.dat109.objects.Kredittkort;
+import no.hvl.dat109.objects.Kunde;
+import no.hvl.dat109.objects.Reservasjon;
 
+/**
+ * Klasse som definerer utleie for en bil
+ * 
+ * @author Marius, Charlie, Glenn, Francis 
+ *
+ */
 public class UtleieBil {
-	public void leiUt(Bil bil) {
+	
+	/**
+	 * Metode for å leie ut en bil.
+	 * 
+	 * @param bil
+	 */
+	public void leiUt(Bil bil, Kunde kunde) {
 		/**
 		 * TODO: 
 		 * 	- Få inn kredittkortnummer, valider.
@@ -29,18 +43,20 @@ public class UtleieBil {
 		
 		Kredittkort kort = new Kredittkort(kortNummer);
 		Boolean gyldigKort = kort.validerKort();
+		
 		while (!gyldigKort) {
-			/**
-			 * Legg til feilmelding og nytt forsøk på å skrive inn kortnummer.
-			 */
-			System.out.println("Kortnummer ikke gyldig. Prøv igjen: ");
+			System.out.println("Kortnummer ikke gyldig, må ha en lengde på 16 siffer. Prøv igjen: ");
 			int nyttKortNummer = sc.nextInt();
 			
 			kort.setKortNummer(nyttKortNummer);
 			gyldigKort = kort.validerKort();
 		}
 		
+		kunde.setKredittKort(kort);
+		
 		String regNr = bil.getRegnr();
+		
+		//Skal reservasjon lages her for så legges til i selskap attributten reservasjoner?
 		
 		
 		sc.close();
