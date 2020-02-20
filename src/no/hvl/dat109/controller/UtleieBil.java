@@ -1,11 +1,16 @@
 package no.hvl.dat109.controller;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Scanner;
 
 import no.hvl.dat109.objects.Bil;
 import no.hvl.dat109.objects.Kredittkort;
 import no.hvl.dat109.objects.Kunde;
 import no.hvl.dat109.objects.Reservasjon;
+import no.hvl.dat109.objects.Selskap;
+import no.hvl.dat109.objects.Utlevering;
+
 
 /**
  * Klasse som definerer utleie for en bil
@@ -20,7 +25,7 @@ public class UtleieBil {
 	 * 
 	 * @param bil
 	 */
-	public void leiUt(Bil bil, Kunde kunde) {
+	public void leiUt(Selskap selskap) {
 		/**
 		 * TODO: 
 		 * 	- Få inn kredittkortnummer, valider.
@@ -38,6 +43,26 @@ public class UtleieBil {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		LocalDate currDate = LocalDate.now();
+		
+		System.out.println("Skriv inn telefonnummer: ");
+		int telefonnummer = sc.nextInt();
+		
+		List<Reservasjon> alleReservasjoner = selskap.getReservasjoner();
+		
+		Reservasjon res = alleReservasjoner.stream()
+				.filter(r -> telefonnummer == r.getKunde().getTlfNr())
+				.findAny()
+				.orElse(null);
+		
+		if(res == null) {
+			System.out.println("Finnes ikke en reservasjon med dette telefonnummeret");
+			sc.close();
+			return;
+		}
+		
+		Kunde kunde = res.getKunde();
+		
 		System.out.println("Skriv inn kredittkortnummer: ");
 		int kortNummer = sc.nextInt();
 		
@@ -53,10 +78,11 @@ public class UtleieBil {
 		}
 		
 		kunde.setKredittKort(kort);
+		String regNr = res.getBil().getRegnr();
+		int kmstand = res.getBil().getKmStand();
 		
-		String regNr = bil.getRegnr();
-		
-		//Skal reservasjon lages her for så legges til i selskap attributten reservasjoner?
+		Utlevering utlevering = new Utlevering(kunde.getKredittKort(), regNr, kmstand, currDate, res.getStartDato().plusDays(res.getAntallDager()));
+		selskap.leggTilUtlevertBil(utlevering);
 		
 		
 		sc.close();
