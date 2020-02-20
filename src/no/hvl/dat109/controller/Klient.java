@@ -1,6 +1,14 @@
 package no.hvl.dat109.controller;
 
-import no.hvl.dat109.objects.*;
+import java.util.List;
+import java.util.Scanner;
+
+import no.hvl.dat109.objects.Adresse;
+import no.hvl.dat109.objects.Bil;
+import no.hvl.dat109.objects.Bilpark;
+import no.hvl.dat109.objects.Kontor;
+import no.hvl.dat109.objects.Reservasjon;
+import no.hvl.dat109.objects.Selskap;
 
 public class Klient {
 
@@ -17,7 +25,31 @@ public class Klient {
 		sandnes.setBiler(bilpark.leggTilBiler2());
 		
 		SokEtterBil bilSok = new SokEtterBil();
-		bilSok.sokBil(easyCar);
+		
+		//Kopier herfra
+		List<Bil> tilgjBiler = bilSok.sokBil(easyCar);
+		
+		System.out.println("Tilgjengelige biler: ");
+		tilgjBiler.stream().forEach(System.out :: println);
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Skriv inn regnr for ønsket bil: ");
+		String regnr = sc.nextLine();
+		
+		Bil bil = tilgjBiler.stream()
+				.filter(b -> regnr.equals(b.getRegnr()))
+				.findAny()
+				.orElse(null);
+		
+		if(bil == null) {
+			System.out.println("Finnes ikke en bil med dette registreringsnummeret");
+			sc.close();
+			return;
+		}
+		
+		
+		
+		sc.close();
 
 	}
 
