@@ -66,4 +66,12 @@ public class Selskap {
 		return this.kontorer;
 	}
 	
+	public void leggTilUtlevertBil(Utlevering utlevering) {
+		utleverteBiler.add(utlevering);
+	}
+	
+	public void leggTilKontor(Kontor kontor) {
+		kontorer.add(kontor);
+	}
+	
 }
