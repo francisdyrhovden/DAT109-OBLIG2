@@ -16,6 +16,7 @@ public class Selskap {
 	private List<Reservasjon> reservasjoner;
 	private List<Kontor> kontorer;
 	private List<Utlevering> utleverteBiler;
+	private List<Retur> returnerteBiler;
 	
 	public Selskap(String navn, Adresse firmaAdr, String tlfNr) {
 		this.navn = navn;
@@ -23,6 +24,8 @@ public class Selskap {
 		this.tlfNr = tlfNr;
 		this.reservasjoner = new ArrayList<Reservasjon>();
 		this.kontorer = new ArrayList<Kontor>();
+		this.utleverteBiler = new ArrayList<Utlevering>();
+		this.returnerteBiler = new ArrayList<Retur>();
 	}
 
 	public String getNavn() {
@@ -72,6 +75,18 @@ public class Selskap {
 	
 	public void leggTilKontor(Kontor kontor) {
 		kontorer.add(kontor);
+	}
+	
+	public void leggTilReturnertBil(Retur retur) {
+		returnerteBiler.add(retur);
+	}
+
+	public List<Utlevering> getUtleverteBiler() {
+		return utleverteBiler;
+	}
+
+	public List<Retur> getReturnerteBiler() {
+		return returnerteBiler;
 	}
 	
 }
