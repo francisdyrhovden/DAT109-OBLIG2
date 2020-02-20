@@ -15,6 +15,7 @@ public class Selskap {
 	private String tlfNr;
 	private List<Reservasjon> reservasjoner;
 	private List<Kontor> kontorer;
+	private List<Utlevering> utleverteBiler;
 	
 	public Selskap(String navn, Adresse firmaAdr, String tlfNr) {
 		this.navn = navn;
