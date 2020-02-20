@@ -24,7 +24,7 @@ public class InnleveringBil {
 	 * 
 	 * @param bil
 	 */
-	public void leverInn(Selskap selskap) {
+	public static void leverInn(Selskap selskap) {
 		//Dato for innlevering
 		LocalDate currDate = LocalDate.now();
 		Scanner sc = new Scanner(System.in);
