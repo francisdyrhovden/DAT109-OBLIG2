@@ -11,8 +11,6 @@ import no.hvl.dat109.objects.Bil;
 import no.hvl.dat109.objects.Kontor;
 import no.hvl.dat109.objects.Selskap;
 
-
-
 /**
  * 
  * @author Charlie, Marius, Glenn, Francis
@@ -54,6 +52,8 @@ public class SokEtterBil {
 		System.out.println("Skriv inn hvor mange dager du vil leie bilen: ");
 		int dager = sc.nextInt();
 		
+		sc.close();
+		
 		List<Kontor> alleKontorer = selskap.getKontorer();
 		
 		Kontor utleieplass = alleKontorer.stream()
@@ -66,8 +66,6 @@ public class SokEtterBil {
 		List<Bil> bilListe =  alleBiler.stream()
 				.filter(b -> b.getLedig() == true)
 				.collect(Collectors.toList());
-		
-		sc.close();
 		
 		return bilListe;
 		

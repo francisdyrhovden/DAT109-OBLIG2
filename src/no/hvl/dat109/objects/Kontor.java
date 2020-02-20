@@ -20,7 +20,7 @@ public class Kontor {
 	private Selskap selskap;
 	private List<Bil> biler;
 	
-	public Kontor(int id, String navn, Adresse adresse, Selskap selskap) {
+	public Kontor(String navn, Adresse adresse, Selskap selskap) {
 		super();
 		this.id = count.incrementAndGet();
 		this.navn = navn;
