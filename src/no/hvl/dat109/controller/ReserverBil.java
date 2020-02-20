@@ -24,7 +24,7 @@ import no.hvl.dat109.objects.Selskap;
 
 public class ReserverBil {
 	
-	public void sokBil(Selskap selskap) {
+	public static void reserverBil(Selskap selskap) {
 		
 		Scanner sc = new Scanner(System.in);
 		DateTimeFormatter dtf = DateTimeFormatter.BASIC_ISO_DATE;
