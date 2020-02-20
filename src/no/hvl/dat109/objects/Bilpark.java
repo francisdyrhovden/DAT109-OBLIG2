@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Bilpark {
 	
-	public List<Bil> leggTilBiler1() {
+	public static List<Bil> leggTilBiler1() {
 		
 		List<Bil> biler =new ArrayList<Bil>();
 	
@@ -21,7 +21,7 @@ public class Bilpark {
 		return biler;	
 	}
 	
-	public List<Bil> leggTilBiler2() {
+	public static List<Bil> leggTilBiler2() {
 		
 		List<Bil> biler =new ArrayList<Bil>();
 		

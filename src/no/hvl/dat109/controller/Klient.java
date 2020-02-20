@@ -16,13 +16,11 @@ public class Klient {
 		
 		Selskap easyCar = new Selskap("EasyCar", new Adresse("tulleveien 1", 4308, "Sandnes"), "92822779");
 		
-		Bilpark bilpark = new Bilpark();
-		
 		Kontor sandnes = new Kontor("Sandnes", new Adresse("Tulleveien 1", 4308, "Sandnes"), easyCar);
 		Kontor bergen = new Kontor("Bergen", new Adresse("Tulleveien 2", 5063, "Bergen"), easyCar);
 		
-		bergen.setBiler(bilpark.leggTilBiler1());
-		sandnes.setBiler(bilpark.leggTilBiler2());
+		bergen.setBiler(Bilpark.leggTilBiler1());
+		sandnes.setBiler(Bilpark.leggTilBiler2());
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Hei og velkommen til EasyCar. Meny: ");
