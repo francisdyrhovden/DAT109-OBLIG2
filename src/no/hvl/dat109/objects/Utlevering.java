@@ -20,4 +20,7 @@ public class Utlevering {
 		this.returDato = returDato;
 	}
 	
+	public Kredittkort getKredittkort() {
+		return kredittkort;
+	}
 }
