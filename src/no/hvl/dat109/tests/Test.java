@@ -1,5 +1,7 @@
 package no.hvl.dat109.tests;
 
+import no.hvl.dat109.objects.*;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,8 +18,9 @@ class Test {
 	@org.junit.jupiter.api.Test
 	void erBilReservert() {
 		Bil b1 = new Bil("SU12345", "Fiat", "Panda", "Rød", UtleiegruppeEnum.LITEN_BIL);
+		Reservasjon r1 = new Reservasjon();
 		
-		Reservasjon.reserver(b1);
+		r1.reserver(b1);
 		
 		assertFalse(b1.getLedig());
 	}

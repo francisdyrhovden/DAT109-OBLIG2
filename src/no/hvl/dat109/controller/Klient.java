@@ -24,32 +24,10 @@ public class Klient {
 		bergen.setBiler(bilpark.leggTilBiler1());
 		sandnes.setBiler(bilpark.leggTilBiler2());
 		
-		SokEtterBil bilSok = new SokEtterBil();
+		ReserverBil bilSok = new ReserverBil();
 		
-		//Kopier herfra
-		List<Bil> tilgjBiler = bilSok.sokBil(easyCar);
+		bilSok.sokBil(easyCar);
 		
-		System.out.println("Tilgjengelige biler: ");
-		tilgjBiler.stream().forEach(System.out :: println);
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Skriv inn regnr for ønsket bil: ");
-		String regnr = sc.nextLine();
-		
-		Bil bil = tilgjBiler.stream()
-				.filter(b -> regnr.equals(b.getRegnr()))
-				.findAny()
-				.orElse(null);
-		
-		if(bil == null) {
-			System.out.println("Finnes ikke en bil med dette registreringsnummeret");
-			sc.close();
-			return;
-		}
-		
-		
-		
-		sc.close();
 
 	}
 

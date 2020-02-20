@@ -32,6 +32,10 @@ public class Reservasjon {
 		reserver(bil);
 	}
 	
+	public Reservasjon() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * Metode for å sette en bil som reservert.
 	 * 
