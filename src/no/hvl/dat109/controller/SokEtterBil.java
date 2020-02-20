@@ -19,7 +19,7 @@ import no.hvl.dat109.objects.Selskap;
 
 public class SokEtterBil {
 	
-	public List<Bil> sokBil(Selskap selskap) {
+	public static void sokBil(Selskap selskap) {
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -67,7 +67,6 @@ public class SokEtterBil {
 				.filter(b -> b.getLedig() == true)
 				.collect(Collectors.toList());
 		
-		return bilListe;
 		
 	}
 

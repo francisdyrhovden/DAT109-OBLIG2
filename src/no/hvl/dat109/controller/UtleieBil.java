@@ -25,7 +25,7 @@ public class UtleieBil {
 	 * 
 	 * @param bil
 	 */
-	public void leiUt(Selskap selskap) {
+	public static void leiUt(Selskap selskap) {
 		/**
 		 * TODO: 
 		 * 	- Få inn kredittkortnummer, valider.
