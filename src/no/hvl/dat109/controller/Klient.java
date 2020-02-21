@@ -21,14 +21,12 @@ public class Klient {
 		easyCar.leggTilKontor(sandnes);
 		easyCar.leggTilKontor(bergen);
 		
-		valgMeny();
 	
+		valgMeny();
 
 	}
 	
 	public static void valgMeny() {
-		
-		
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Hei og velkommen til EasyCar. Meny: ");
