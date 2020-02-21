@@ -19,6 +19,9 @@ public class Klient {
 		bergen.setBiler(Bilpark.leggTilBiler1());
 		sandnes.setBiler(Bilpark.leggTilBiler2());
 		
+		easyCar.leggTilKontor(sandnes);
+		easyCar.leggTilKontor(bergen);
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Hei og velkommen til EasyCar. Meny: ");
 		System.out.println("1. Reservasjon");
