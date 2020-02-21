@@ -8,6 +8,8 @@ import java.time.LocalTime;
 import java.util.Date;
 
 /**
+ * Klasse for å definere en reservasjon.
+ * 
  * @author Francis, Marius, Charlie, Glenn
  *
  */

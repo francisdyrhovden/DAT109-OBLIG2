@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Klasse for å definere ett selskap
+ * Klasse for å definere ett selskap.
  * 
  * @author Marius, Charlie, Glenn, Francis
  *
