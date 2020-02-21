@@ -55,6 +55,7 @@ public class ReserverBil {
 		
 		
 		List<Kontor> alleKontorer = selskap.getKontorer();
+		System.out.println(alleKontorer);
 		
 		Kontor utleieplass = alleKontorer.stream()
 				.filter(k -> utleiekontor.equals(k.getNavn()))
@@ -66,6 +67,7 @@ public class ReserverBil {
 				.findAny()
 				.orElse(null);
 		
+		System.out.println(utleieplass.getNavn());
 		List<Bil> alleBiler = utleieplass.getBiler();
 		
 		List<Bil> tilgjBiler =  alleBiler.stream()
@@ -76,7 +78,9 @@ public class ReserverBil {
 		tilgjBiler.stream().forEach(System.out :: println);
 		
 		System.out.println("Skriv inn regnr for ønsket bil: ");
+		sc.nextLine();
 		String regnr = sc.nextLine();
+		
 		
 		Bil bil = tilgjBiler.stream()
 				.filter(b -> regnr.equals(b.getRegnr()))
@@ -99,12 +103,14 @@ public class ReserverBil {
 		int tlf = sc.nextInt();
 		
 		System.out.println("Skriv inn gateadresse: ");
+		sc.nextLine();
 		String gateadresse = sc.nextLine();
 		
 		System.out.println("Skriv inn postnr: ");
 		int postnr = sc.nextInt();
 		
 		System.out.println("Skriv inn poststed: ");
+		sc.nextLine();
 		String poststed = sc.nextLine();
 		
 		
