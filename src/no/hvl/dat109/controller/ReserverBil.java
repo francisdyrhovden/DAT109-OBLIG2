@@ -104,14 +104,16 @@ public class ReserverBil {
 		System.out.println("Skriv inn poststed: ");
 		String poststed = sc.nextLine();
 		
+		sc.close();
+		
+		System.out.println("Reservasjon fullført!");
+		System.out.println();
+		Klient.valgMeny();
 		
 		
 		Kunde k1 = new Kunde(fnavn, enavn, tlf, new Adresse(gateadresse, postnr, poststed));
 		Reservasjon reservasjon = new Reservasjon(bil, dato, tidspunkt, dager, utleieplass, returplass, k1);
 		selskap.leggTilReservasjon(reservasjon);
-		
-		
-		sc.close();
 		
 	}
 

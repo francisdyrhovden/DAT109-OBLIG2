@@ -1,6 +1,7 @@
 package no.hvl.dat109.objects;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -48,8 +49,8 @@ public class Kontor {
 	/**
 	 * Metode for å lage en reservasjon.
 	 */
-	public Reservasjon lagReservasjon(Bil bil, LocalDate startDato, int antDager, Kontor utleieKontor, Kontor returKontor, Kunde kunde) {
-		Reservasjon res = new Reservasjon(bil, startDato, antDager, utleieKontor, returKontor, kunde);
+	public Reservasjon lagReservasjon(Bil bil, LocalDate startDato, LocalTime startTid, int antDager, Kontor utleieKontor, Kontor returKontor, Kunde kunde) {
+		Reservasjon res = new Reservasjon(bil, startDato, startTid, antDager, utleieKontor, returKontor, kunde);
 		
 		return res;
 	}
