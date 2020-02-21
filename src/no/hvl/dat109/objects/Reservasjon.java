@@ -4,6 +4,7 @@
 package no.hvl.dat109.objects;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 
 /**
@@ -14,16 +15,18 @@ public class Reservasjon {
 
 	private Bil bil;
 	private LocalDate startDato;
+	private LocalTime startTid;
 	private int antallDager;
 	private Kontor utleiested;
 	private Kontor retursted;
 	private Kunde kunde;
 	
 	
-	public Reservasjon(Bil bil, LocalDate startDato, int antallDager, Kontor utleiested, Kontor retursted, Kunde kunde) {
+	public Reservasjon(Bil bil, LocalDate startDato, LocalTime startTid, int antallDager, Kontor utleiested, Kontor retursted, Kunde kunde) {
 		super();
 		this.bil = bil;
 		this.startDato = startDato;
+		this.startTid = startTid;
 		this.antallDager = antallDager;
 		this.utleiested = utleiested;
 		this.retursted = retursted;
