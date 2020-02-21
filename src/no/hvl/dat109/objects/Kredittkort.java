@@ -1,5 +1,11 @@
 package no.hvl.dat109.objects;
 
+/**
+ * 
+ * @author Charlie, Marius, Francis, Glenn
+ *
+ */
+
 public class Kredittkort {
 	private int kortNummer;
 	

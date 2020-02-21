@@ -2,6 +2,12 @@ package no.hvl.dat109.objects;
 
 import java.time.LocalDate;
 
+/**
+ * 
+ * @author Charlie, Marius, Francis, Glenn 
+ *
+ */
+
 public class Utlevering {
 
 	private Kredittkort kredittkort;
