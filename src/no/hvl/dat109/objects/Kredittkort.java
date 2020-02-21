@@ -7,24 +7,24 @@ package no.hvl.dat109.objects;
  */
 
 public class Kredittkort {
-	private int kortNummer;
+	private long kortNummer;
 	
-	public Kredittkort(int nummer) {
+	public Kredittkort(long nummer) {
 		this.kortNummer = nummer;
 	}
 
-	public int getKortNummer() {
+	public long getKortNummer() {
 		return kortNummer;
 	}
 
-	public void setKortNummer(int kortNummer) {
+	public void setKortNummer(long kortNummer) {
 		this.kortNummer = kortNummer;
 	}
 	
 	public boolean validerKort() {
 		boolean ok = false;
 		
-		if (String.valueOf(kortNummer).length() == 16) {
+		if (String.valueOf(kortNummer).length() == 5) {
 			ok = true;
 		}
 		

@@ -26,21 +26,6 @@ public class UtleieBil {
 	 * @param bil
 	 */
 	public static void leiUt(Selskap selskap) {
-		/**
-		 * TODO: 
-		 * 	- Få inn kredittkortnummer, valider.
-		 * 		- Feilmelding om ikke gyldig
-		 * 		- Ellers send videre.
-		 * 
-		 * 	- Få inn bil som skal leies ut.
-		 * 		- Registreringnummer
-		 * 		- Kilometerstand
-		 * 		- Dato og klokkeslett for utleie
-		 * 		- Dato og klokkeslett for forventet innlevering
-		 * 		- Trenger kontor bilen er på slik vi kan fjærne bilen fra dette kontoret
-		 * 		- Sett som opptatt
-		 */
-		
 		Scanner sc = new Scanner(System.in);
 		
 		LocalDate currDate = LocalDate.now();
@@ -64,7 +49,7 @@ public class UtleieBil {
 		Kunde kunde = res.getKunde();
 		
 		System.out.println("Skriv inn kredittkortnummer: ");
-		int kortNummer = sc.nextInt();
+		long kortNummer = sc.nextLong();
 		
 		Kredittkort kort = new Kredittkort(kortNummer);
 		Boolean gyldigKort = kort.validerKort();
@@ -84,7 +69,6 @@ public class UtleieBil {
 		Utlevering utlevering = new Utlevering(kunde.getKredittKort(), regNr, kmstand, currDate, res.getStartDato().plusDays(res.getAntallDager()));
 		selskap.leggTilUtlevertBil(utlevering);
 		
-		
-		sc.close();
+		Klient.valgMeny();
 	}
 }

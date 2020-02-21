@@ -68,7 +68,7 @@ public class InnleveringBil {
 		List<Retur> returListe = selskap.getReturnerteBiler();
 		returListe.add(retur);
 		
-		sc.close();
+		Klient.valgMeny();
 		
 	}
 }

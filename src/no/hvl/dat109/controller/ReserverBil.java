@@ -1,11 +1,8 @@
 package no.hvl.dat109.controller;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -38,6 +35,7 @@ public class ReserverBil {
 		
 		System.out.println("Skriv inn dato du ønsker å leie fra. (dd/MM/yyyy)");
 		String stringdato = sc.nextLine();
+		
 		dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate dato = LocalDate.parse(stringdato, dtf);
 		
@@ -110,16 +108,18 @@ public class ReserverBil {
 		sc.nextLine();
 		String poststed = sc.nextLine();
 		
-		sc.close();
+		
 		
 		System.out.println("Reservasjon fullført!");
 		System.out.println();
-		Klient.valgMeny();
 		
 		
 		Kunde k1 = new Kunde(fnavn, enavn, tlf, new Adresse(gateadresse, postnr, poststed));
 		Reservasjon reservasjon = new Reservasjon(bil, dato, tidspunkt, dager, utleieplass, returplass, k1);
 		selskap.leggTilReservasjon(reservasjon);
+		
+
+		Klient.valgMeny();
 		
 	}
 

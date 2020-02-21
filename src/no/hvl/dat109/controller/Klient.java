@@ -17,26 +17,27 @@ public class Klient {
 
 		bergen.setBiler(Bilpark.leggTilBiler1());
 		sandnes.setBiler(Bilpark.leggTilBiler2());
-<<<<<<< HEAD
+		
+		easyCar.leggTilKontor(sandnes);
+		easyCar.leggTilKontor(bergen);
+		
+		valgMeny();
 	
 
 	}
 	
 	public static void valgMeny() {
-=======
 		
-		easyCar.leggTilKontor(sandnes);
-		easyCar.leggTilKontor(bergen);
 		
->>>>>>> 9d5645635ffb113e0d166c60f572524c0fae8d6f
 		Scanner sc = new Scanner(System.in);
+
 		System.out.println("Hei og velkommen til EasyCar. Meny: ");
 		System.out.println("1. Reservasjon");
 		System.out.println("2. Utlevering av bil");
 		System.out.println("3. Innlevering av bil");
 		System.out.println("4. Avslutt");
 		System.out.println("\nSkriv inn tallet for ønsket valg:\n");
-		
+
 		int valg = sc.nextInt();
 		
 		switch (valg) {
@@ -54,7 +55,7 @@ public class Klient {
 			default:
 				System.out.println("Noe gikk galt.");
 		}
-		sc.close();
+		
 	}
 
 }
