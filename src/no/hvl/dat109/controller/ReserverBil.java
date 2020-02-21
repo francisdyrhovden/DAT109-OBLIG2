@@ -61,6 +61,11 @@ public class ReserverBil {
 				.findAny()
 				.orElse(null);
 		
+		Kontor returplass = alleKontorer.stream()
+				.filter(k -> returkontor.equals(k.getNavn()))
+				.findAny()
+				.orElse(null);
+		
 		List<Bil> alleBiler = utleieplass.getBiler();
 		
 		List<Bil> tilgjBiler =  alleBiler.stream()
@@ -105,7 +110,7 @@ public class ReserverBil {
 		
 		
 		Kunde k1 = new Kunde(fnavn, enavn, tlf, new Adresse(gateadresse, postnr, poststed));
-		Reservasjon reservasjon = new Reservasjon(bil, dato, dager, utleiekontor, returkontor, k1);
+		Reservasjon reservasjon = new Reservasjon(bil, dato, dager, utleieplass, returplass, k1);
 		selskap.leggTilReservasjon(reservasjon);
 		
 		
