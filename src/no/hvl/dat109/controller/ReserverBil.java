@@ -3,6 +3,7 @@ package no.hvl.dat109.controller;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
@@ -42,12 +43,8 @@ public class ReserverBil {
 		
 		System.out.println("Skriv inn ønsket klokkeslett for utleie. (HH:mm)");
 		String klokke = sc.nextLine();
-		SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
-		try {
-			Date time = timeFormatter.parse(klokke);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		dtf = DateTimeFormatter.ofPattern("hh:mm");
+		LocalTime tidspunkt = LocalTime.parse(klokke);
 		
 		
 		System.out.println("Skriv inn hvor mange dager du vil leie bilen: ");
@@ -116,7 +113,7 @@ public class ReserverBil {
 		
 		
 		Kunde k1 = new Kunde(fnavn, enavn, tlf, new Adresse(gateadresse, postnr, poststed));
-		Reservasjon reservasjon = new Reservasjon(bil, dato, dager, utleieplass, returplass, k1);
+		Reservasjon reservasjon = new Reservasjon(bil, dato, tidspunkt, dager, utleieplass, returplass, k1);
 		selskap.leggTilReservasjon(reservasjon);
 		
 		
