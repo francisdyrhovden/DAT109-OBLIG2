@@ -70,5 +70,9 @@ public class InnleveringBil {
 		
 		sc.close();
 		
+		System.out.println("Bilen er innlevert! :)");
+		System.out.println();
+		Klient.valgMeny();
+		
 	}
 }
